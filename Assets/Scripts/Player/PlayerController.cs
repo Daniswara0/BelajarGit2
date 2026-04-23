@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float currentHP = 100;
-    public float speed = 5f;
+    public float currentHP;
+    public float speed;
     private PlayerInput playerInput;
     private Vector2 moveInput;
 
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         if (currentHP <= 0)
         {
-            GameManager.Instance.GameOver();
+            GameManager.Instance.BackToMenu();
         }
     }
 }
